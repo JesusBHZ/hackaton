@@ -1,3 +1,15 @@
+// Navigation Drawer
+import 'package:exito/google/homepage.dart';
+import 'package:flutter/material.dart';
+import 'package:exito/Clase03/Page3.dart';
+import 'package:exito/google/home.dart';
+import 'package:flutter/services.dart';
+import 'package:local_auth/local_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'main.dart';
+import 'homepage.dart';
 import 'package:exito/google/main.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -10,43 +22,39 @@ import 'countdown/main.dart';
 import 'diario_audio/diario.dart';
 import 'diario_audio/main.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+void main() => runApp(const Page2());
+
+class Page2 extends StatelessWidget {
+  const Page2({super.key});
+
+  static const appTitle = 'Cuatrimestre';
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      title: appTitle,
+      home: MyHomePage(title: appTitle),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            title: Text(
-          "Waby",
-        )),
-        body: Center(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text(
-              "Hola",
-              style: TextStyle(fontSize: 30),
+        appBar: AppBar(title: Text(title)),
+        body: const Center(
+          child: Text(
+            '4-°',
+            style: TextStyle(
+              fontSize: 25.0,
             ),
-            Image.asset(
-              'assets/huella.png',
-              width: 200,
-              height: 200,
-            ),
-            MaterialButton(
-              onPressed: () {
-                logout();
-                Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (context) => SingIn()));
-              },
-              child: Text(
-                "Log Out",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
-              ),
-              color: Colors.blueAccent,
-            ),
-          ],
-        )),
+          ),
+        ),
         drawer: Drawer(
           // Add a ListView to the drawer. This ensures the user can scroll
           // through the options in the drawer if there isn't enough vertical

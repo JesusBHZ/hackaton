@@ -1,16 +1,16 @@
 // Navigation Drawer
 import 'package:flutter/material.dart';
-import 'package:exito/Clase03/Page3.dart';
-import 'package:exito/Clase03/main.dart';
+import 'package:exito/google/home.dart';
+import 'package:exito/Clase03/Page2.dart';
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
 
-void main() => runApp(const Page2());
+void main() => runApp(const Page3());
 
-class Page2 extends StatelessWidget {
-  const Page2({super.key});
+class Page3 extends StatelessWidget {
+  const Page3({super.key});
 
-  static const appTitle = 'Cuatrimestre';
+  static const appTitle = 'Asignatura';
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(title: Text(title)),
       body: const Center(
         child: Text(
-          '4-°',
+          'Diseño de apps',
           style: TextStyle(
             fontSize: 25.0,
           ),
@@ -60,10 +60,10 @@ class MyHomePage extends StatelessWidget {
               },
             ),
             ListTile(
-              title: const Text('Asignatura'),
+              title: const Text('Cuatrimestre'),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Page3()));
+                    MaterialPageRoute(builder: (context) => const Page2()));
               },
             ),
           ],
