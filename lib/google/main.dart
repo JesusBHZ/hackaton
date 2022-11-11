@@ -39,7 +39,7 @@ class _googleSigninState extends State<googleSignin> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.teal),
-      home: islogged ? HomePage() : const SingIn(),
+      home: islogged ? HomePage(user: user!) : const SingIn(),
     );
   }
 }

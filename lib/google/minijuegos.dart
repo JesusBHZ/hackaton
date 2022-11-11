@@ -1,14 +1,12 @@
 // Navigation Drawer
 import 'package:flutter/material.dart';
-import 'package:exito/google/home.dart';
-import 'package:exito/Clase03/Page2.dart';
-import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
 
-void main() => runApp(const Page3());
 
-class Page3 extends StatelessWidget {
-  const Page3({super.key});
+void main() => runApp(const MiniJuegos());
+
+class MiniJuegos extends StatelessWidget {
+  const MiniJuegos({super.key});
 
   static const appTitle = 'Asignatura';
 
@@ -54,17 +52,17 @@ class MyHomePage extends StatelessWidget {
             ),
             ListTile(
               title: const Text('Alumno'),
-              onTap: () {
+              /*onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const MyApp()));
-              },
+                    MaterialPageRoute(builder: (context) => const Page3()));
+              },*/
             ),
             ListTile(
               title: const Text('Cuatrimestre'),
-              onTap: () {
+              /*onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Page2()));
-              },
+                    MaterialPageRoute(builder: (context) => const Page3()));
+              },*/
             ),
           ],
         ),
