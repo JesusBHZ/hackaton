@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1061354038642",
+    "project_id": "exito-4d691",
+    "storage_bucket": "exito-4d691.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061354038642:android:979c6ea59500e81d4e69eb",
+        "android_client_info": {
+          "package_name": "com.example.exito"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061354038642-lrn1i47f0cdvrmbrlc1ju1qvmc9vvuvd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL72Q2BkLZsyXbqmQZW7N3AderjqaiKz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061354038642-lrn1i47f0cdvrmbrlc1ju1qvmc9vvuvd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
