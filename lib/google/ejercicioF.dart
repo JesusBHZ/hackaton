@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {
-  runApp(MiniJuegos());
+  runApp(EjerFisicos());
 }
 
-class MiniJuegos extends StatelessWidget {
+class EjerFisicos extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class _PantallaInicioState extends State<PantallaInicio> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [_boton2("Ver video"), _boton3("Ver video")],
+              children: [_boton2("Ver video")],
             )
           ],
         ),
@@ -50,35 +50,26 @@ class _PantallaInicioState extends State<PantallaInicio> {
 Widget _boton(String texto) {
   return ElevatedButton(
     onPressed: () {
-      launch("https://poki.com/es/g/pop-it-master");
+      launch("https://www.youtube.com/watch?v=1J8CRcoFekE");
     },
-    child: const Text('Pop it master'),
+    child: const Text('Ejercicios de yoga'),
   );
 }
 
 Widget _boton1(String texto) {
   return ElevatedButton(
     onPressed: () {
-      launch("https://poki.com/es/g/maze-path-of-light");
+      launch("https://www.youtube.com/watch?v=0dyebB9e-vM");
     },
-    child: const Text('Juego del laberinto'),
+    child: const Text('Juego de respiracion'),
   );
 }
 
 Widget _boton2(String texto) {
   return ElevatedButton(
     onPressed: () {
-      launch("https://poki.com/es/g/subway-surfers");
+      launch("https://www.youtube.com/watch?v=ZiT33JKydL4");
     },
-    child: const Text('Subway surfers'),
-  );
-}
-
-Widget _boton3(String texto) {
-  return ElevatedButton(
-    onPressed: () {
-      launch("https://poki.com/es/g/jigsaw-deluxe");
-    },
-    child: const Text('Rompecabezas'),
+    child: const Text('Ejercicios de cardio'),
   );
 }

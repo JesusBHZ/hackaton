@@ -8,7 +8,7 @@
             "name": "exito",
             "request": "launch",
             "type": "dart",
-            "program":"lib/google/homepage.dart"
+            "program":"lib/google/main.dart"
         },
         {
             "name": "exito (profile mode)",

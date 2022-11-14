@@ -63,7 +63,10 @@ class _CountdownPageState extends State<CountdownPage>
       backgroundColor: Color(0xfff5fbff),
       body: Column(
         children: [
-          Text('Tiempo de no hacer nada :)', style: TextStyle(fontSize: 32)),
+          const SizedBox(
+            height: 40,
+          ),
+          Text('Respira', style: TextStyle(fontSize: 32)),
           Expanded(
             child: Stack(
               alignment: Alignment.center,

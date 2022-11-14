@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(Expediente());
 }
 
-class MyApp extends StatelessWidget {
+class Expediente extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(home: Home());
@@ -304,7 +304,6 @@ class _HomeState extends State<Home> {
                 },
               ),
               Text("sin opinion"),
-
               Text("sin opinion"),
               Radio(
                 value: 4,
@@ -430,7 +429,6 @@ class _HomeState extends State<Home> {
                 },
               ),
               Text("sin opinion"),
-
               Text("sin opinion"),
               Radio(
                 value: 4,
@@ -494,7 +492,6 @@ class _HomeState extends State<Home> {
                 },
               ),
               Text("sin opinion"),
-
               Radio(
                 value: 4,
                 groupValue: valuefirst,
@@ -557,7 +554,6 @@ class _HomeState extends State<Home> {
                 },
               ),
               Text("sin opinion"),
-
               Radio(
                 value: 4,
                 groupValue: valuefirst,
@@ -620,7 +616,6 @@ class _HomeState extends State<Home> {
                 },
               ),
               Text("sin opinion"),
-
               Text("sin opinion"),
               Radio(
                 value: 4,

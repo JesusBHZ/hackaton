@@ -12,7 +12,7 @@ class Komodoro extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Countdown app',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.teal,
       ),
       home: CountdownPage(),
     );

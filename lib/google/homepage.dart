@@ -7,6 +7,11 @@ import 'singin.dart';
 import 'minijuegos.dart';
 import 'countdown/main.dart';
 import 'audios.dart';
+import 'respiracion.dart';
+import 'diario.dart';
+import 'expediente.dart';
+import 'videos.dart';
+import 'ejercicioF.dart';
 
 class HomePage extends StatelessWidget {
   final User user;
@@ -16,24 +21,28 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text(
-              "Waby",
-            )),
+          title: Text(
+            "Waby",
+          ),
+          backgroundColor: Colors.teal,
+        ),
         body: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  "Hola",
-                  style: TextStyle(fontSize: 30),
-                ),
-                Image.asset(
-                  'assets/huella.jpg',
-                  width: 200,
-                  height: 200,
-                ),
-              ],
-            )),
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text(
+              "Hola, Bienvenido",
+              style: TextStyle(
+                fontSize: 30,
+              ),
+            ),
+            Image.asset(
+              'assets/tranquilidad.jpg',
+              width: 200,
+              height: 200,
+            ),
+          ],
+        )),
         drawer: Drawer(
           // Add a ListView to the drawer. This ensures the user can scroll
           // through the options in the drawer if there isn't enough vertical
@@ -44,38 +53,39 @@ class HomePage extends StatelessWidget {
             children: [
               const DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.teal,
                 ),
                 child: Text('Menu'),
               ),
               ListTile(
                 // DefaultTabController & BottonNavigationBar
-                title: const Text('Asistencia'),
+                title: const Text(
+                  'Asistencia',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
               ),
               ListTile(
                 // DefaultTabController & BottonNavigationBar
                 title: const Text('Ejercicio fisico'),
-                trailing: Icon(Icons.home),
+                trailing: Icon(Icons.fitness_center_outlined),
                 onTap: () {
-                  /*Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Page2()));*/
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => EjerFisicos()));
                 },
               ),
               ListTile(
                 // DefaultTabController & BottonNavigationBar
                 title: const Text('Mini juegos'),
-                trailing: Icon(Icons.home),
+                trailing: Icon(Icons.games),
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const MiniJuegos()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MiniJuegos()));
                 },
               ),
               ListTile(
                 // DefaultTabController & BottonNavigationBar
                 title: const Text('Video'),
-                trailing: Icon(Icons.home),
+                trailing: Icon(Icons.play_arrow),
                 onTap: () {
                   /*Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const Page2()));*/
@@ -84,7 +94,7 @@ class HomePage extends StatelessWidget {
               ListTile(
                 // DefaultTabController & BottonNavigationBar
                 title: const Text('Audios'),
-                trailing: Icon(Icons.home),
+                trailing: Icon(Icons.music_note),
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => MyApp()));
@@ -93,7 +103,7 @@ class HomePage extends StatelessWidget {
               ListTile(
                 // DefaultTabController & BottonNavigationBar
                 title: const Text('Metodo Komodoro'),
-                trailing: Icon(Icons.home),
+                trailing: Icon(Icons.punch_clock),
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Komodoro()));
@@ -102,38 +112,43 @@ class HomePage extends StatelessWidget {
               ListTile(
                 // DefaultTabController & BottonNavigationBar
                 title: const Text('Respiracion'),
-                trailing: Icon(Icons.home),
+                trailing: Icon(Icons.sentiment_satisfied),
                 onTap: () {
-                  /*Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Page2()));*/
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Respiracion()));
                 },
               ),
               ListTile(
                 // DefaultTabController & BottonNavigationBar
-                title: const Text('Seguimiento'),
+                title: const Text(
+                  'Seguimiento',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
               ),
               ListTile(
                 // DefaultTabController & BottonNavigationBar
                 title: const Text('Diaro'),
-                trailing: Icon(Icons.home),
+                trailing: Icon(Icons.account_balance_wallet),
                 onTap: () {
-                  /*Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Page2()));*/
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const MyDiary()));
                 },
               ),
               ListTile(
                 // DefaultTabController & BottonNavigationBar
                 title: const Text('Expediente'),
-                trailing: Icon(Icons.home),
+                trailing: Icon(Icons.list_alt),
                 onTap: () {
-                  /*Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Page2()));*/
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Expediente()));
                 },
               ),
               ListTile(
                 // DefaultTabController & BottonNavigationBar
                 title: const Text('Cerrar sesion'),
-                trailing: Icon(Icons.home),
+                trailing: Icon(Icons.logout),
                 onTap: () {
                   logout();
                   Navigator.push(context,
